@@ -25,7 +25,7 @@ const makeTitle = title
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <SEO
-      title="A Very Descriptive Title"
+      title={makeTitle}
       description="A heavily optimized description full of well-researched keywords."
       openGraph={{
         basic: {
