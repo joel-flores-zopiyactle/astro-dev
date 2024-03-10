@@ -1,8 +1,9 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+import { fade } from "astro:transitions";
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
-
 import "@fontsource-variable/inter"; // Defaults to wght axis
 
 export interface Props {
@@ -17,13 +18,19 @@ const makeTitle = title
 ---
 
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en" transition:animate="none">
+  <head transition:animate={fade({ duration: "0.5s" })}>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
+
     <SEO
       title={makeTitle}
       description="A heavily optimized description full of well-researched keywords."
@@ -58,7 +65,7 @@ const makeTitle = title
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
   </head>
-  <body>
+  <body transition:animate="slide">
     <Navbar />
     <slot />
     <Footer />
