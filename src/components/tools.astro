@@ -11,11 +11,7 @@ import { Icon } from "astro-icon/components";
     <!-- Logo Carousel animation -->
     <div
       x-data="{}"
-      x-init="$nextTick(() => {
-        let ul = $refs.logos;
-        ul.insertAdjacentHTML('afterend', ul.outerHTML);
-        ul.nextSibling.setAttribute('aria-hidden', 'true');
-      })"
+      x-init="$nextTick(() => {let ul = $refs.logos; ul.insertAdjacentHTML('afterend', ul.outerHTML); ul.nextSibling.setAttribute('aria-hidden','true');})"
       class="w-full inline-flex flex-nowrap overflow-hidden
     [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
     >
@@ -41,3 +37,9 @@ import { Icon } from "astro-icon/components";
     </div>
   </div>
 </section>
+
+<script>
+  document
+    .querySelectorAll("[data-confetti-button]")
+    .addEventListener("load", () => {});
+</script>
