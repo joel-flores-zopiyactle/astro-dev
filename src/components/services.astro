@@ -3,7 +3,7 @@ import { Picture } from "astro:assets";
 import servicesSvg from "assets/services.svg";
 ---
 
-<div class="pt-16 pb-5">
+<div class="md:pt-16 pb-5">
   <div class="mx-auto px-0 lg:px-8">
     <div class="lg:text-center relative z-20">
       <h2
@@ -23,8 +23,8 @@ import servicesSvg from "assets/services.svg";
   </div>
 </div>
 
-<div class="grid lg:grid-cols-2 place-items-center pb-8 md:pb-24">
-  <section class="flex justify-center px-10 md:px-0 pb-6">
+<div class="grid lg:grid-cols-2 place-items-center pb-8 md:pb-8">
+  <section class="flex justify-center px-10 md:px-20 pb-6 md:mt-28">
     <Picture
       src={servicesSvg}
       alt="Astronaut in the air"
