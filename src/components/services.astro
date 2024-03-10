@@ -3,11 +3,11 @@ import { Picture } from "astro:assets";
 import servicesSvg from "assets/services.svg";
 ---
 
-<div class="py-16">
+<div class="pt-16 pb-5">
   <div class="mx-auto px-0 lg:px-8">
     <div class="lg:text-center relative z-20">
       <h2
-        class="text-2xl md:text-6xl text-center font-extrabold leading-7 text-slate-900 mb-10"
+        class="text-2xl md:text-6xl text-center font-extrabold leading-7 text-slate-900 mb-2 md:mb-10"
       >
         Servicios
       </h2>
@@ -24,24 +24,27 @@ import servicesSvg from "assets/services.svg";
 </div>
 
 <div class="grid lg:grid-cols-2 place-items-center pb-8 md:pb-24">
-  <section>
+  <section class="flex justify-center px-10 md:px-0 pb-6">
     <Picture
       src={servicesSvg}
       alt="Astronaut in the air"
       widths={[200, 400, 600]}
-      sizes="(max-width: 400px) 100vw, 620px"
+      sizes="(max-width: 600px) 100vw, 400px"
       loading="eager"
       format="avif"
       class="z-20 relative"
     />
   </section>
+
   <section>
     <div class="mx-auto max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
       <dl
         class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
       >
         <div class="relative pl-16">
-          <dt class="text-base font-semibold leading-7 text-gray-900">
+          <dt
+            class="text-base font-semibold leading-3 md:leading-7 text-gray-900"
+          >
             <div
               class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
             >
@@ -62,7 +65,9 @@ import servicesSvg from "assets/services.svg";
             </div>
             Diseño web
           </dt>
-          <dd class="mt-2 text-base leading-7 text-gray-600">
+          <dd
+            class="mt-2 text-xs md:text-base leading-5 md:leading-7 text-gray-600"
+          >
             Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse
             semper morbi. Odio urna massa nunc massa.
           </dd>
@@ -89,7 +94,9 @@ import servicesSvg from "assets/services.svg";
             </div>
             Desarrollo de landing pages
           </dt>
-          <dd class="mt-2 text-base leading-7 text-gray-600">
+          <dd
+            class="mt-2 text-xs md:text-base leading-5 md:leading-7 text-gray-600"
+          >
             Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget.
             Sem sodales gravida quam turpis enim lacus amet.
           </dd>
@@ -116,7 +123,9 @@ import servicesSvg from "assets/services.svg";
             </div>
             Desarrollo de aplicaciones web con intergación a APIs y Base de datos
           </dt>
-          <dd class="mt-2 text-base leading-7 text-gray-600">
+          <dd
+            class="mt-2 text-xs md:text-base leading-5 md:leading-7 text-gray-600"
+          >
             Quisque est vel vulputate cursus. Risus proin diam nunc commodo.
             Lobortis auctor congue commodo diam neque.
           </dd>
@@ -143,7 +152,9 @@ import servicesSvg from "assets/services.svg";
             </div>
             Despliegue de tu sitio web
           </dt>
-          <dd class="mt-2 text-base leading-7 text-gray-600">
+          <dd
+            class="mt-2 text-xs md:text-base leading-5 md:leading-7 text-gray-600"
+          >
             Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis
             aliquet hac quis. Id hac maecenas ac donec pharetra eget.
           </dd>
