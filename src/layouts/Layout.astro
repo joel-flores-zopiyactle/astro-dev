@@ -21,7 +21,11 @@ const makeTitle = title
 <html lang="en" transition:animate="none">
   <head transition:animate={fade({ duration: "0.5s" })}>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta
+      id="wixMobileViewport"
+      name="viewport"
+      content="width=320, user-scalable=no"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link
       rel="stylesheet"
@@ -66,9 +70,11 @@ const makeTitle = title
     ></script>
   </head>
   <body transition:animate="slide">
-    <Navbar />
-    <slot />
-    <Footer />
-    <style is:global></style>
+    <main>
+      <Navbar />
+      <slot />
+      <Footer />
+      <style is:global></style>
+    </main>
   </body>
 </html>
